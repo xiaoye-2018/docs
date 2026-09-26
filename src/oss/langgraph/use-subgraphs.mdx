@@ -964,7 +964,7 @@ def ask_fruit_expert(question: str) -> str:
 agent = create_agent(
     model="gpt-5.4-mini",
     tools=[ask_fruit_expert],
-    prompt="You have a fruit expert. ALWAYS delegate fruit questions to ask_fruit_expert.",
+    system_prompt="You have a fruit expert. ALWAYS delegate fruit questions to ask_fruit_expert.",
     middleware=[  # [!code highlight]
         ToolCallLimitMiddleware(tool_name="ask_fruit_expert", run_limit=1),  # [!code highlight]
     ],  # [!code highlight]
