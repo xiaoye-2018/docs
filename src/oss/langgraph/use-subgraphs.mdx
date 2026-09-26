@@ -945,7 +945,7 @@ def fruit_info(fruit_name: str) -> str:
 fruit_agent = create_agent(
     model="gpt-5.4-mini",
     tools=[fruit_info],
-    prompt="You are a fruit expert. Use the fruit_info tool. Respond in one sentence.",
+    system_prompt="You are a fruit expert. Use the fruit_info tool. Respond in one sentence.",
     checkpointer=True,  # [!code highlight]
 )
 
